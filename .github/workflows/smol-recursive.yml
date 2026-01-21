@@ -178,7 +178,7 @@ jobs:
             
             # Test execution
             if [ "${{ inputs.test_command }}" != "" ] && [ $VERIFIED = true ]; then
-              if ! ${{ inputs.test_command }} 2>&1 > /dev/null; then
+              if ! ${{ inputs.test_command }} > /dev/null 2>&1; then
                 echo "    ✗ Tests failed"
                 VERIFIED=false
               else
@@ -229,7 +229,7 @@ jobs:
               fi
               
               if [ "${{ inputs.test_command }}" != "" ] && [ $VERIFIED = true ]; then
-                if ! ${{ inputs.test_command }} 2>&1 > /dev/null; then
+                if ! ${{ inputs.test_command }} > /dev/null 2>&1; then
                   echo "    ✗ Tests failed"
                   VERIFIED=false
                 else
@@ -281,7 +281,7 @@ jobs:
               fi
               
               if [ "${{ inputs.test_command }}" != "" ] && [ $VERIFIED = true ]; then
-                if ! ${{ inputs.test_command }} 2>&1 > /dev/null; then
+                if ! ${{ inputs.test_command }} > /dev/null 2>&1; then
                   echo "    ✗ Tests failed"
                   VERIFIED=false
                 else
@@ -515,9 +515,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: smol-recursive-optimization
-          path: |
-            smol-recursive-report.md
-            /tmp/smol-versions/*
+          path: smol-recursive-report.md
           
       - name: Summary
         run: |
