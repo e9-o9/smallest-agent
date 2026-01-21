@@ -48,6 +48,14 @@ The Smol Agent Protocol is a systematic approach to code minimization that treat
 - **smol.toml** - TOML configuration format
 - **smol.xml** - XML representation
 
+### AI Markup Language
+- **smol.aiml** - AIML (Artificial Intelligence Markup Language) implementation with pattern matching and decision logic
+
+### Automation & CI/CD
+- **GitHub Actions** - Two workflow implementations in `.github/workflows/`:
+  - **smol-optimize.yml** - Standard iterative optimization workflow
+  - **smol-recursive.yml** - Recursive AIML-based optimization with threshold convergence
+
 ### Documentation Formats
 - **smol.ascii** - ASCII art diagram of the protocol flow
 - **smol.math.md** - Complete mathematical formulation with proofs
@@ -115,6 +123,55 @@ python smol.py path/to/file.js
 gcc smol.c -o smol
 ./smol path/to/file.js
 ```
+
+### AIML (Artificial Intelligence Markup Language)
+```xml
+<!-- Use with an AIML interpreter like Program AB or similar -->
+<!-- Load smol.aiml into your AIML bot -->
+Human: START OPTIMIZATION src/example.js
+Bot: [Executes optimization protocol]
+
+<!-- Query patterns -->
+Human: SMOL HELP
+Human: SMOL PRINCIPLES
+Human: OPTIMIZATION OBJECTIVE
+```
+
+### GitHub Actions
+
+#### Standard Optimization Workflow
+```yaml
+# Trigger manually from GitHub Actions UI
+# Navigate to: Actions → Smol Protocol - Code Optimization → Run workflow
+
+# Or via GitHub CLI
+gh workflow run smol-optimize.yml \
+  -f target_file=src/smallest-agent.js \
+  -f max_iterations=20 \
+  -f test_command="npm test"
+```
+
+#### Recursive AIML-Based Optimization
+```yaml
+# Trigger manually from GitHub Actions UI  
+# Navigate to: Actions → Smol Protocol - Recursive AIML-Based Optimization → Run workflow
+
+# Or via GitHub CLI
+gh workflow run smol-recursive.yml \
+  -f target_file=src/smallest-agent.js \
+  -f threshold_bytes=1 \
+  -f max_iterations=50 \
+  -f test_command="npm test"
+```
+
+**GitHub Actions Features:**
+- **smol-optimize.yml**: Standard iterative optimization with simple transformations
+- **smol-recursive.yml**: Advanced recursive optimization implementing AIML patterns as workflow steps
+  - Recursive loop with convergence detection
+  - Threshold-based termination
+  - Version tracking for all iterations
+  - Comprehensive AIML pattern implementation (Phase 1, 2, 3)
+  - Detailed optimization reports
 
 ## Decision Rule
 
