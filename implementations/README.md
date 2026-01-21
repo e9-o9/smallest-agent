@@ -42,6 +42,16 @@ The Smol Agent Protocol is a systematic approach to code minimization that treat
 ### Esoteric/Historical
 - **smol.forth** - Forth implementation
 
+### Declarative Formats
+- **smol.json** - JSON representation
+- **smol.yaml** - YAML configuration format
+- **smol.toml** - TOML configuration format
+- **smol.xml** - XML representation
+
+### Documentation Formats
+- **smol.ascii** - ASCII art diagram of the protocol flow
+- **smol.math.md** - Complete mathematical formulation with proofs
+
 ## Core Algorithm
 
 Each implementation follows the same constraint optimization loop:
